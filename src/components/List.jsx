@@ -6,11 +6,12 @@ function ListElement({index , content, date}){
 
 }
 function List({params}){
-	const TODOS = Object.values(params).flat();
-	
+
+
     return(
-    <ul>
-		{TODOS.map((element, index) => {
+		<ul>
+		{params.map((element, index) => {
+
 			return <ListElement
 				index={index}
 				key={index}

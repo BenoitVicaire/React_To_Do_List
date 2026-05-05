@@ -1,7 +1,8 @@
 import List from './List';
 
-function Card(params){
+function Card({params}){
     const DATE= new Date().toLocaleDateString('fr-FR');
+
     return (
         <article>
             <h1>To Do List</h1>

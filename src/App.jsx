@@ -15,7 +15,6 @@ const TODOS = [
 		date:"07/05/2026"
 	},
 ];
-
 function App() {
 
   	return (
