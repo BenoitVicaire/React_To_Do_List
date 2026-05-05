@@ -5,26 +5,19 @@ function ListElement({index , content, date}){
 	)
 
 }
-
-function List({date}){
-
+function List({params}){
+	const TODOS = Object.values(params).flat();
+	
     return(
     <ul>
-		<ListElement
-			index={1}
-			content={"metro"}
-			date={"04/05/2026"}
-		/>
-		<ListElement
-			index={2}
-			content={"boulo"}
-			date={"05/05/2026"}
-		/>
-		<ListElement
-			index={3}
-			content={"dodo"}
-			date={"06/05/2026"}
-		/>
+		{TODOS.map((element, index) => {
+			return <ListElement
+				index={index}
+				key={index}
+				content={element.todo}
+				date={element.date}
+			/>
+		} )}
     </ul>
     );
 }
