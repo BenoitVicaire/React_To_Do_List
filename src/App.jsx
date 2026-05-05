@@ -1,6 +1,7 @@
 import './App.css';
 import Card from './components/ToDoCard';
 import CardTernaire from './components/ToDoTernaire';
+import CardAnd from './components/ToDoAnd';
 
 const TODOS = [
 	{
@@ -27,6 +28,8 @@ function App() {
 			<Card params={TODOS} />
 			<h2>Condition Ternaire</h2>
 			<CardTernaire params={TODOS} />
+			<h2>Condition And</h2>
+			<CardAnd params={TODOS} />
 		</>
   	)
 }
