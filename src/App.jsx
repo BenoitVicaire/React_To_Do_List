@@ -1,7 +1,6 @@
 import './App.css';
+import Form from './components/form';
 import Card from './components/ToDoCard';
-import CardTernaire from './components/ToDoTernaire';
-import CardAnd from './components/ToDoAnd';
 
 const TODOS = [
 	{
@@ -21,15 +20,16 @@ const TODOS = [
 	},
 ];
 function App() {
+	function handleSubmit(event){
+		event.preventDefault();
+		const INPUTS=document.querySelectorAll("input[type=text]");
+		INPUTS.forEach(element=>console.log(element.value));
+	}
 
   	return (
 		<>
-			<h1>Condition if</h1>
 			<Card params={TODOS} />
-			<h2>Condition Ternaire</h2>
-			<CardTernaire params={TODOS} />
-			<h2>Condition And</h2>
-			<CardAnd params={TODOS} />
+			<Form onSubmit={(event)=>handleSubmit(event)}/>
 		</>
   	)
 }
